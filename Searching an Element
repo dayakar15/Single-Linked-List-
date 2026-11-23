@@ -1,0 +1,30 @@
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+n1 = Node(10)
+n2 = Node(20)
+n3 = Node(30)
+n4 = Node(40)
+n5 = Node(50)
+
+# Connect nodes
+n1.next = n2
+n2.next = n3
+n3.next = n4
+n4.next = n5
+
+head = n1
+key = 70
+temp = head
+found = False
+while temp is not None:
+    if temp.data == key:
+        found = True
+        break
+    temp = temp.next
+    
+if found:
+    print("Element Found")
+else:
+    print("Element is Not Found")
